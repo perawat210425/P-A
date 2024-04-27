@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
             Flip();
         }//
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, jump);
     }
