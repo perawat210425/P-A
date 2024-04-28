@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         CurrentHealth = Mathf.Clamp(CurrentHealth - Damage, 0, StartingHealth);
-        CurrentHealth -= Damage;
+       
         if (CurrentHealth > 0)
         {
 
@@ -30,6 +30,10 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TakeDamage(1f);
+        }
     }
 }
 
